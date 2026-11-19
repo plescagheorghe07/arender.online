@@ -1,0 +1,617 @@
+[
+  {
+    "slug": "sony-playstation-5",
+    "name": "Sony PlayStation 5",
+    "description_ro": "",
+    "description_ru": "",
+    "details_ro": "Prelungire +200 MDL/zi  | 2 gamepaduri în complect",
+    "details_ru": "Продление 200 MDL/день  | 2 геймпада в комплекте",
+    "image": "products/sony-playstation-5.webp",
+    "sort_order": 1,
+    "prices": [
+      {
+        "days": "1",
+        "price": 400,
+        "is_best": false,
+        "sort_order": 0
+      },
+      {
+        "days": "2",
+        "price": 500,
+        "is_best": false,
+        "sort_order": 1
+      },
+      {
+        "days": "3",
+        "price": 650,
+        "is_best": true,
+        "sort_order": 2
+      },
+      {
+        "days": "4",
+        "price": 800,
+        "is_best": false,
+        "sort_order": 3
+      },
+      {
+        "days": "5",
+        "price": 950,
+        "is_best": false,
+        "sort_order": 4
+      },
+      {
+        "days": "6",
+        "price": 1100,
+        "is_best": false,
+        "sort_order": 5
+      },
+      {
+        "days": "7",
+        "price": 1250,
+        "is_best": false,
+        "sort_order": 6
+      },
+      {
+        "days": "14",
+        "price": 2000,
+        "is_best": false,
+        "sort_order": 7
+      }
+    ],
+    "addons": [
+      {
+        "title_ro": "2 gamepad supl.",
+        "title_ru": "Доп. 2 геймпада",
+        "price": 200,
+        "image": "addons/sony-playstation-5-2-gamepad-supl.webp"
+      },
+      {
+        "title_ro": "Proiector",
+        "title_ru": "Проектор",
+        "price": 200,
+        "image": "addons/sony-playstation-5-proiector.webp"
+      }
+    ]
+  },
+  {
+    "slug": "jbl-partybox-120",
+    "name": "JBL PartyBox 120",
+    "description_ro": "Sunet puternic și bas profund pentru orice petrecere",
+    "description_ru": "Мощный звук и глубокий бас для любой вечеринки",
+    "details_ro": "Prelungire +400 MDL/zi",
+    "details_ru": "Продление +400 MDL/день",
+    "image": "products/jbl-partybox-120.webp",
+    "sort_order": 2,
+    "prices": [
+      {
+        "days": "1-2",
+        "price": 500,
+        "is_best": false,
+        "sort_order": 0
+      },
+      {
+        "days": "3",
+        "price": 800,
+        "is_best": true,
+        "sort_order": 1
+      },
+      {
+        "days": "4",
+        "price": 1100,
+        "is_best": false,
+        "sort_order": 2
+      },
+      {
+        "days": "5",
+        "price": 1400,
+        "is_best": false,
+        "sort_order": 3
+      },
+      {
+        "days": "6",
+        "price": 1700,
+        "is_best": false,
+        "sort_order": 4
+      },
+      {
+        "days": "7",
+        "price": 2000,
+        "is_best": false,
+        "sort_order": 5
+      }
+    ],
+    "addons": [
+      {
+        "title_ro": "2 microfoane",
+        "title_ru": "2 микрофона",
+        "price": 400,
+        "image": "addons/jbl-partybox-120-2-microfoane.webp"
+      },
+      {
+        "title_ro": "Baterie",
+        "title_ru": "Аккумулятор",
+        "price": 200,
+        "image": "addons/jbl-partybox-120-baterie.webp"
+      }
+    ]
+  },
+  {
+    "slug": "karcher-puzzi-10-1",
+    "name": "Karcher Puzzi 10/1",
+    "description_ro": "Curățarea profesională a covoarelor și a mobilierului tapițat. Îndepărtează orice pete și murdăria adânc înrădăcinată",
+    "description_ru": "Профессиональная чистка ковров и мягкой мебели. Удаляет любые пятна и глубокое загрязнение",
+    "details_ro": "Chimie inclusă. Prelungire +350 MDL/zi",
+    "details_ru": "Химия в комплекте. Продление +350 MDL/день",
+    "image": "products/karcher-puzzi-10-1.webp",
+    "sort_order": 3,
+    "prices": [
+      {
+        "days": "1",
+        "price": 400,
+        "is_best": false,
+        "sort_order": 0
+      },
+      {
+        "days": "2",
+        "price": 500,
+        "is_best": false,
+        "sort_order": 1
+      },
+      {
+        "days": "3",
+        "price": 700,
+        "is_best": true,
+        "sort_order": 2
+      },
+      {
+        "days": "4",
+        "price": 900,
+        "is_best": false,
+        "sort_order": 3
+      },
+      {
+        "days": "5",
+        "price": 1200,
+        "is_best": false,
+        "sort_order": 4
+      },
+      {
+        "days": "6",
+        "price": 1600,
+        "is_best": false,
+        "sort_order": 5
+      },
+      {
+        "days": "7",
+        "price": 2000,
+        "is_best": false,
+        "sort_order": 6
+      }
+    ],
+    "addons": [
+      {
+        "title_ro": "Șurubelniță cu perie",
+        "title_ru": "Шуруповерт с щеткой",
+        "price": 200,
+        "image": "addons/karcher-puzzi-10-1-surubelnita-cu-perie.webp"
+      }
+    ]
+  },
+  {
+    "slug": "meta-quest-3s",
+    "name": "Meta Quest 3s",
+    "description_ro": "Ochelari VR moderni, cu imagine clară, performanță ridicată și suport pentru realitate mixtă. Potriviți pentru jocuri, filme și o experiență completă de imersiune",
+    "description_ru": "Современные VR-очки с отличным качеством изображения, высокой производительностью и поддержкой смешанной реальности. Подходят для игр, фильмов и полного погружения",
+    "details_ro": "Prelungire: 300 MDL/zi",
+    "details_ru": "Продление: 300 MDL/день",
+    "image": "products/meta-quest-3s.webp",
+    "sort_order": 4,
+    "prices": [
+      {
+        "days": "1",
+        "price": 500,
+        "is_best": false,
+        "sort_order": 0
+      },
+      {
+        "days": "2",
+        "price": 600,
+        "is_best": false,
+        "sort_order": 1
+      },
+      {
+        "days": "3",
+        "price": 900,
+        "is_best": true,
+        "sort_order": 2
+      }
+    ],
+    "addons": []
+  },
+  {
+    "slug": "playstation-vr2",
+    "name": "PlayStation VR2",
+    "description_ro": "O calitate înaltă a imaginii și o experiență de joc realistă, la un nivel superior",
+    "description_ru": "Высокое качество изображения и реалистичное погружение в игры нового уровня",
+    "details_ro": "Pachetul include o consolă PS5 și un cont de joc.\nPrelungire: 300 MDL/zi",
+    "details_ru": "В комплекте PS5 и игровой аккаунт.\nПродление +300 MDL/день",
+    "image": "products/playstation-vr2.webp",
+    "sort_order": 5,
+    "prices": [
+      {
+        "days": "1",
+        "price": 500,
+        "is_best": false,
+        "sort_order": 0
+      },
+      {
+        "days": "2",
+        "price": 800,
+        "is_best": false,
+        "sort_order": 1
+      },
+      {
+        "days": "3",
+        "price": 1000,
+        "is_best": true,
+        "sort_order": 2
+      },
+      {
+        "days": "4",
+        "price": 1300,
+        "is_best": false,
+        "sort_order": 3
+      },
+      {
+        "days": "5",
+        "price": 1600,
+        "is_best": false,
+        "sort_order": 4
+      },
+      {
+        "days": "6",
+        "price": 1900,
+        "is_best": false,
+        "sort_order": 5
+      }
+    ],
+    "addons": []
+  },
+  {
+    "slug": "dyson-airwrap-multi-styler",
+    "name": "Dyson Airwrap Multi-Styler",
+    "description_ro": "Un aparat multifuncțional pentru uscare, îndreptare și realizarea de bucle, fără supraîncălzire",
+    "description_ru": "Многофункциональный стайлер для сушки, выпрямления и создания локонов без перегрева",
+    "details_ro": "Se curăță și se dezinfectează înainte de fiecare închiriere. Ca nou · special pentru dumneavoastră. Prelungire +200 MDL/zi",
+    "details_ru": "Очищается и дезинфицируется перед каждой сдачей в аренду. Как новое · специально для вас. Продление +200 MDL/день",
+    "image": "products/dyson-airwrap-multi-styler.webp",
+    "sort_order": 6,
+    "prices": [
+      {
+        "days": "1-2",
+        "price": 600,
+        "is_best": true,
+        "sort_order": 0
+      },
+      {
+        "days": "3",
+        "price": 800,
+        "is_best": false,
+        "sort_order": 1
+      },
+      {
+        "days": "4",
+        "price": 1000,
+        "is_best": false,
+        "sort_order": 2
+      },
+      {
+        "days": "5",
+        "price": 1200,
+        "is_best": false,
+        "sort_order": 3
+      },
+      {
+        "days": "6",
+        "price": 1400,
+        "is_best": false,
+        "sort_order": 4
+      },
+      {
+        "days": "7",
+        "price": 1600,
+        "is_best": false,
+        "sort_order": 5
+      }
+    ],
+    "addons": []
+  },
+  {
+    "slug": "nintendo-switch-2",
+    "name": "Nintendo Switch 2",
+    "description_ro": "Consola hibridă · acasă, în fața televizorului sau oriunde doriți. Joc multiplayer pentru toată gașca",
+    "description_ru": "Гибридная консоль · дома перед телевизором или где угодно. Многопользовательская игра для всей компании",
+    "details_ro": "Jocuri incluse. Prelungire +200 MDL/zi",
+    "details_ru": "Игры в комплекте. Продление +200 MDL/день",
+    "image": "products/nintendo-switch-2.webp",
+    "sort_order": 7,
+    "prices": [
+      {
+        "days": "1",
+        "price": 500,
+        "is_best": false,
+        "sort_order": 0
+      },
+      {
+        "days": "2",
+        "price": 600,
+        "is_best": false,
+        "sort_order": 1
+      },
+      {
+        "days": "3",
+        "price": 700,
+        "is_best": true,
+        "sort_order": 2
+      },
+      {
+        "days": "4",
+        "price": 800,
+        "is_best": false,
+        "sort_order": 3
+      },
+      {
+        "days": "5",
+        "price": 900,
+        "is_best": false,
+        "sort_order": 4
+      },
+      {
+        "days": "6",
+        "price": 1000,
+        "is_best": false,
+        "sort_order": 5
+      },
+      {
+        "days": "7",
+        "price": 1300,
+        "is_best": false,
+        "sort_order": 6
+      },
+      {
+        "days": "14",
+        "price": 2300,
+        "is_best": false,
+        "sort_order": 7
+      },
+      {
+        "days": "28",
+        "price": 3500,
+        "is_best": false,
+        "sort_order": 8
+      }
+    ],
+    "addons": []
+  },
+  {
+    "slug": "xgimi-mogo-2-pro",
+    "name": "XGIMI Mogo 2 Pro",
+    "description_ro": "Proiector portabil cu imagine până la 120” și Android integrat. Cinema oriunde",
+    "description_ru": "Портативный проектор с диагональю изображения до 120 дюймов и встроенной ОС Android. Кинотеатр в любом месте",
+    "details_ro": "HDMI inclus. Prelungire +300 MDL/zi",
+    "details_ru": "HDMI в комплекте. Продление +300 MDL/день",
+    "image": "products/xgimi-mogo-2-pro.webp",
+    "sort_order": 8,
+    "prices": [
+      {
+        "days": "1-2",
+        "price": 500,
+        "is_best": false,
+        "sort_order": 0
+      },
+      {
+        "days": "3",
+        "price": 700,
+        "is_best": true,
+        "sort_order": 1
+      },
+      {
+        "days": "4",
+        "price": 900,
+        "is_best": false,
+        "sort_order": 2
+      },
+      {
+        "days": "5",
+        "price": 1100,
+        "is_best": false,
+        "sort_order": 3
+      },
+      {
+        "days": "6",
+        "price": 1300,
+        "is_best": false,
+        "sort_order": 4
+      },
+      {
+        "days": "7",
+        "price": 1500,
+        "is_best": false,
+        "sort_order": 5
+      }
+    ],
+    "addons": []
+  },
+  {
+    "slug": "frigider-portabil-60-l",
+    "name": "Frigider portabil 60 L",
+    "description_ro": "Frigider portabil de 60L pentru călătorii, camping sau acasă",
+    "description_ru": "Портативный холодильник объёмом 60 л для путешествий, кемпинга или дома",
+    "details_ro": "Prelungire +200 MDL/zi",
+    "details_ru": "Продление +200 MDL/день",
+    "image": "products/frigider-portabil-60-l.webp",
+    "sort_order": 9,
+    "prices": [
+      {
+        "days": "1-3",
+        "price": 600,
+        "is_best": true,
+        "sort_order": 0
+      },
+      {
+        "days": "4",
+        "price": 800,
+        "is_best": false,
+        "sort_order": 1
+      },
+      {
+        "days": "5",
+        "price": 1000,
+        "is_best": false,
+        "sort_order": 2
+      },
+      {
+        "days": "6",
+        "price": 1200,
+        "is_best": false,
+        "sort_order": 3
+      },
+      {
+        "days": "7",
+        "price": 1400,
+        "is_best": false,
+        "sort_order": 4
+      }
+    ],
+    "addons": []
+  },
+  {
+    "slug": "conditioner-mobil",
+    "name": "Conditioner mobil",
+    "description_ro": "Răcirea încăperilor cu o suprafață de până la 115 m². Evacuarea căldurii prin furtun, fără montare",
+    "description_ru": "Охлаждение помещений площадью до 115 м². Отвод тепла через шланг, без монтажа",
+    "details_ro": "Carcasă inclusă. Prelungire +250 MDL/zi",
+    "details_ru": "Гофра в комплекте. Продление +250 MDL/день",
+    "image": "products/conditioner-mobil.webp",
+    "sort_order": 10,
+    "prices": [
+      {
+        "days": "1-2",
+        "price": 500,
+        "is_best": false,
+        "sort_order": 0
+      },
+      {
+        "days": "3",
+        "price": 750,
+        "is_best": true,
+        "sort_order": 1
+      },
+      {
+        "days": "4",
+        "price": 1000,
+        "is_best": false,
+        "sort_order": 2
+      },
+      {
+        "days": "5",
+        "price": 1250,
+        "is_best": false,
+        "sort_order": 3
+      },
+      {
+        "days": "6",
+        "price": 1500,
+        "is_best": false,
+        "sort_order": 4
+      },
+      {
+        "days": "7",
+        "price": 1750,
+        "is_best": false,
+        "sort_order": 5
+      }
+    ],
+    "addons": []
+  },
+  {
+    "slug": "retro-gaming-console",
+    "name": "Retro Gaming Console",
+    "description_ro": "Peste 1000 de jocuri clasice într-un singur dispozitiv. Distracție pentru întreaga familie",
+    "description_ru": "Более 1000 классических игр в одном устройстве. Развлечение для всей семьи",
+    "details_ro": "2 gamepad-uri incluse. Prelungire +150 MDL/zi",
+    "details_ru": "2 геймпада в комплекте. Продление +150 MDL/день",
+    "image": "products/retro-gaming-console.webp",
+    "sort_order": 11,
+    "prices": [
+      {
+        "days": "1-2",
+        "price": 400,
+        "is_best": true,
+        "sort_order": 0
+      },
+      {
+        "days": "3",
+        "price": 550,
+        "is_best": false,
+        "sort_order": 1
+      },
+      {
+        "days": "4",
+        "price": 700,
+        "is_best": false,
+        "sort_order": 2
+      }
+    ],
+    "addons": []
+  },
+  {
+    "slug": "dezumidificator",
+    "name": "Dezumidificator",
+    "description_ro": "Elimină umezeala și mirosul de mucegai. Aer curat pentru întreaga familie",
+    "description_ru": "Устраняет влажность и запах плесени. Чистый воздух для всей семьи",
+    "details_ro": "Prelungire +200 MDL/zi",
+    "details_ru": "Продление +200 MDL/день",
+    "image": "products/dezumidificator.webp",
+    "sort_order": 12,
+    "prices": [
+      {
+        "days": "1",
+        "price": 200,
+        "is_best": false,
+        "sort_order": 0
+      },
+      {
+        "days": "2",
+        "price": 400,
+        "is_best": false,
+        "sort_order": 1
+      },
+      {
+        "days": "3",
+        "price": 600,
+        "is_best": true,
+        "sort_order": 2
+      },
+      {
+        "days": "4",
+        "price": 800,
+        "is_best": false,
+        "sort_order": 3
+      },
+      {
+        "days": "5",
+        "price": 1000,
+        "is_best": false,
+        "sort_order": 4
+      },
+      {
+        "days": "6",
+        "price": 1200,
+        "is_best": false,
+        "sort_order": 5
+      }
+    ],
+    "addons": []
+  }
+]

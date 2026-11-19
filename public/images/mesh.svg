@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <filter id="mesh" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="90"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#e7ecff"/>
+  <g filter="url(#mesh)">
+    <circle cx="180" cy="80" r="340" fill="#7c3aed" opacity="0.85"/>
+    <circle cx="1460" cy="40" r="320" fill="#22d3ee" opacity="0.8"/>
+    <circle cx="1280" cy="920" r="380" fill="#e879f9" opacity="0.7"/>
+    <circle cx="220" cy="900" r="340" fill="#38bdf8" opacity="0.75"/>
+    <circle cx="820" cy="460" r="260" fill="#818cf8" opacity="0.55"/>
+    <circle cx="980" cy="180" r="180" fill="#f472b6" opacity="0.45"/>
+  </g>
+</svg>

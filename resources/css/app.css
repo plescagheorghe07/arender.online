@@ -1,0 +1,281 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-stone-200: #cfc9c2;
+    --color-stone-400: #847e76;
+    --color-stone-500: #5c574f;
+}
+
+.admin-app {
+    background: #f3f1ed;
+    --color-stone-200: #e7e3dc;
+    --color-stone-300: #ddd8d0;
+    --color-stone-400: #9c968e;
+    --color-stone-500: #6f6962;
+}
+
+.admin-surface {
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 1px 2px rgba(28, 25, 23, 0.04), 0 12px 32px rgba(28, 25, 23, 0.06);
+}
+
+.admin-surface thead {
+    box-shadow: inset 0 -1px 0 rgba(28, 25, 23, 0.06);
+}
+
+.admin-surface tbody > tr + tr {
+    box-shadow: inset 0 1px 0 rgba(28, 25, 23, 0.05);
+}
+
+.admin-input {
+    border: 0;
+    border-radius: 0.9rem;
+    background: #f3f1ed;
+    padding: 0.6rem 0.85rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #1c1917;
+}
+
+textarea.admin-input {
+    display: block;
+}
+
+.admin-input:focus {
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(6, 78, 59, 0.16);
+}
+
+.admin-row {
+    border-radius: 1rem;
+    background: #f7f5f2;
+    padding: 0.85rem;
+}
+
+.admin-row .admin-input {
+    background: #fff;
+}
+
+.admin-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+    border-radius: 999px;
+    background: #ebe7e2;
+    padding: 0.2rem;
+}
+
+.admin-tabbar {
+    box-shadow: inset 0 -1px 0 rgba(28, 25, 23, 0.06);
+}
+
+.admin-fill {
+    background: #f7f5f2;
+}
+
+.site {
+    background: linear-gradient(165deg, #eef6fc 0%, #d7e9f6 100%);
+}
+
+.site::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url('/images/topography.svg');
+    background-repeat: repeat;
+    background-size: 600px 600px;
+}
+
+.hero-wash {
+    background: linear-gradient(105deg, rgba(239, 246, 255, 0.94) 0%, rgba(255, 255, 255, 0.84) 42%, rgba(237, 233, 254, 0.28) 70%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+.web3-title {
+    background: linear-gradient(100deg, #1e3a8a 0%, #2563eb 46%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.site-input {
+    display: block;
+    width: 100%;
+    margin-top: 0.35rem;
+    border: 0;
+    border-radius: 0.9rem;
+    background: #eef4fb;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.875rem;
+    color: #1c1917;
+}
+
+.site-input:focus {
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+[data-gallery-thumb].is-selected {
+    box-shadow: 0 0 0 2px #1d4ed8;
+}
+
+.site-scroll {
+    scrollbar-width: none;
+}
+
+.site-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.site-link {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 1px;
+}
+
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes drift {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}
+
+@keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.35); }
+    70% { box-shadow: 0 0 0 12px rgba(37, 99, 235, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+
+html.motion [data-reveal] {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+        opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html.motion [data-reveal].reveal-late {
+    transition-delay: 0.1s;
+}
+
+html.motion [data-reveal].is-in {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a, button {
+        transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    button:active {
+        transform: scale(0.97);
+    }
+
+    .hero-photo {
+        animation: drift 18s ease-in-out infinite alternate;
+    }
+
+    .enter > * {
+        animation: rise-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .enter > *:nth-child(2) { animation-delay: 0.08s; }
+    .enter > *:nth-child(3) { animation-delay: 0.16s; }
+    .enter > *:nth-child(4) { animation-delay: 0.24s; }
+
+    .site-link {
+        transition: color 0.2s ease, background-size 0.25s ease;
+    }
+
+    .site-link:hover {
+        background-size: 100% 1px;
+    }
+
+    .stagger > * {
+        animation: rise-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .stagger > *:nth-child(2) { animation-delay: 0.05s; }
+    .stagger > *:nth-child(3) { animation-delay: 0.1s; }
+    .stagger > *:nth-child(4) { animation-delay: 0.15s; }
+    .stagger > *:nth-child(5) { animation-delay: 0.2s; }
+    .stagger > *:nth-child(6) { animation-delay: 0.25s; }
+    .stagger > *:nth-child(7) { animation-delay: 0.3s; }
+    .stagger > *:nth-child(8) { animation-delay: 0.35s; }
+    .stagger > *:nth-child(9) { animation-delay: 0.4s; }
+    .stagger > *:nth-child(10) { animation-delay: 0.45s; }
+    .stagger > *:nth-child(11) { animation-delay: 0.5s; }
+    .stagger > *:nth-child(12) { animation-delay: 0.55s; }
+
+    .contact-pulse {
+        animation: pulse-ring 2.4s ease-out infinite;
+    }
+
+    [data-tab-panel].is-shown {
+        animation: rise-in 0.28s ease;
+    }
+
+    [data-reorder].is-reordering tbody tr {
+        transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    [data-reorder].is-reordering tbody tr.dragging {
+        background: #ecfdf5;
+        box-shadow: 0 10px 24px rgba(28, 25, 23, 0.12);
+    }
+
+    [data-dropzone].is-hot {
+        transform: scale(1.01);
+        background: #ecfdf5;
+        box-shadow: 0 0 0 3px rgba(6, 78, 59, 0.16);
+    }
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body:has([data-cookie-banner]:not([hidden])) [data-contact-dock] {
+    bottom: 17rem;
+}
+
+@media (min-width: 640px) {
+    body:has([data-cookie-banner]:not([hidden])) [data-contact-dock] {
+        bottom: 1.25rem;
+    }
+}
+
+@media (max-width: 639px) {
+    .site main,
+    .site footer {
+        padding-bottom: 6.5rem;
+    }
+
+    [data-contact-dock] {
+        bottom: 5.75rem;
+    }
+
+    [data-cookie-banner] {
+        bottom: 5.25rem;
+    }
+}

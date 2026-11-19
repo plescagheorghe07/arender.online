@@ -1,0 +1,227 @@
+{
+    "title": "Visio Mail API",
+    "version": "2.3.0",
+    "baseUrl": "/api/v1",
+    "overview": "API REST pentru trimitere, listare și webhooks email pe domeniul visio.md. Cheia API se generează din panoul Integrări API. From-ul este mereu adresa aplicației (fromEmail), nu se poate schimba per request.",
+    "authentication": {
+      "type": "API Key",
+      "header": "X-API-Key",
+      "format": "vm_<8hex>_<48hex>",
+      "example": "vm_a1b2c3d4_abc123...",
+      "note": "Cheia completă se afișează o singură dată la creare sau regenerare. Header obligatoriu: Content-Type: application/json"
+    },
+    "permissions": [
+      {
+        "id": "send",
+        "description": "Trimite emailuri"
+      },
+      {
+        "id": "read_stats",
+        "description": "Citește statistici"
+      },
+      {
+        "id": "read_emails",
+        "description": "Listează și citește emailuri"
+      },
+      {
+        "id": "webhooks",
+        "description": "Gestionează webhooks"
+      }
+    ],
+    "rateLimit": "500 cereri / 15 minute per IP pe /api/*",
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/api/v1/send",
+        "permission": "send",
+        "description": "Trimite email. From = fromEmail-ul aplicației API. Body JSON. Returnează 201 la succes.",
+        "headers": {
+          "X-API-Key": "vm_...",
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "to": "obligatoriu · string | string[] | {email, name} | {email, name}[]",
+          "cc": "opțional · același format ca to",
+          "bcc": "opțional · același format ca to",
+          "subject": "string",
+          "html": "string HTML",
+          "text": "string plain text (opțional; se generează din html dacă lipsește)",
+          "replyTo": "string email (opțional)",
+          "metadata": "object JSON (ex: { orderId: \"123\", source: \"crm\" })"
+        },
+        "examples": [
+          {
+            "to": "client@gmail.com",
+            "subject": "Salut",
+            "html": "<p>Bună!</p>"
+          },
+          {
+            "to": [
+              "a@gmail.com",
+              "b@visio.md"
+            ],
+            "subject": "Multi",
+            "html": "<p>La mai mulți</p>"
+          },
+          {
+            "to": {
+              "email": "x@gmail.com",
+              "name": "Client"
+            },
+            "cc": "copy@example.com",
+            "subject": "Cu CC",
+            "html": "<p>Test</p>",
+            "metadata": {
+              "campaign": "q1"
+            }
+          }
+        ],
+        "curl": "curl -X POST https://mail.visio.md/api/v1/send -H \"X-API-Key: YOUR_KEY\" -H \"Content-Type: application/json\" -d '{\"to\":\"client@gmail.com\",\"subject\":\"Test\",\"html\":\"<p>Salut</p>\"}'",
+        "response": {
+          "success": true,
+          "id": "uuid",
+          "messageId": "<id@visio.md>",
+          "metadata": {},
+          "message": "Email trimis cu succes"
+        },
+        "errors": {
+          "400": "to lipsă sau format destinatar invalid",
+          "401": "Cheie API invalidă sau lipsă",
+          "403": "Fără permisiune send",
+          "500": "Eroare SMTP / livrare · vezi câmpul error"
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/emails",
+        "permission": "read_emails",
+        "description": "Listează emailurile acestei aplicații API (trimise via API), cu filtre și paginare.",
+        "query": {
+          "folder": "inbox | sent | spam",
+          "from": "filtru expeditor",
+          "to": "filtru destinatar",
+          "subject": "filtru subiect",
+          "search": "căutare în subiect/conținut",
+          "since": "ISO date (ex: 2026-01-01)",
+          "until": "ISO date",
+          "metadataKey": "cheie metadata",
+          "metadataValue": "valoare metadata",
+          "sentOnly": "true",
+          "receivedOnly": "true",
+          "page": "1",
+          "limit": "50"
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/emails/:id",
+        "permission": "read_emails",
+        "description": "Detalii complete: conținut, atașamente, metadata, adrese to/cc/bcc."
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/stats",
+        "permission": "read_stats",
+        "description": "Statistici: totalSent, sentToday, lastWeek, totalReceived, activeWebhooks."
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/webhooks",
+        "permission": "webhooks",
+        "description": "Înregistrează URL callback pentru evenimente email.",
+        "body": {
+          "url": "https://app.com/webhook · obligatoriu",
+          "events": [
+            "email.received",
+            "email.sent"
+          ],
+          "secret": "opțional · generat automat ca whsec_..."
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/webhooks",
+        "permission": "webhooks",
+        "description": "Listează webhooks active."
+      },
+      {
+        "method": "DELETE",
+        "path": "/api/v1/webhooks/:id",
+        "permission": "webhooks",
+        "description": "Șterge un webhook."
+      },
+      {
+        "method": "PATCH",
+        "path": "/api/v1/emails/:id",
+        "permission": "read_emails",
+        "description": "Actualizează email: isRead, isStarred.",
+        "body": {
+          "isRead": "boolean",
+          "isStarred": "boolean"
+        }
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/emails/:id/mark-read",
+        "permission": "read_emails",
+        "description": "Marchează un email ca citit."
+      },
+      {
+        "method": "POST",
+        "path": "/api/v1/emails/bulk",
+        "permission": "read_emails",
+        "description": "Acțiuni în masă pe emailuri.",
+        "body": {
+          "action": "mark_read | trash | star",
+          "emailIds": "string[] (max 100)"
+        }
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/folders",
+        "permission": "read_stats",
+        "description": "Număr emailuri per folder pentru această aplicație API."
+      },
+      {
+        "method": "GET",
+        "path": "/api/v1/contacts",
+        "permission": "read_emails",
+        "description": "Contacte recente din istoricul trimiterilor API.",
+        "query": {
+          "q": "filtru opțional"
+        }
+      }
+    ],
+    "webhooks": {
+      "description": "La evenimente email, serverul face POST către URL-ul înregistrat.",
+      "events": [
+        "email.received",
+        "email.sent"
+      ],
+      "headers": {
+        "Content-Type": "application/json",
+        "X-Visio-Event": "email.received | email.sent",
+        "X-Visio-Signature": "HMAC-SHA256 hex al body-ului JSON cu secretul webhook"
+      },
+      "verifyExample": "crypto.createHmac('sha256', secret).update(rawBody).digest('hex')",
+      "payload": {
+        "event": "email.received",
+        "email": {
+          "id": "uuid",
+          "subject": "...",
+          "from": {},
+          "to": [],
+          "metadata": {},
+          "attachments": []
+        },
+        "timestamp": "2026-07-10T12:00:00.000Z"
+      }
+    },
+    "errors": {
+      "400": "Parametri invalizi",
+      "401": "Cheie API invalidă sau lipsă",
+      "403": "Permisiune insuficientă pentru acest endpoint",
+      "429": "Prea multe cereri",
+      "500": "Eroare la trimitere / livrare SMTP"
+    }
+  }
