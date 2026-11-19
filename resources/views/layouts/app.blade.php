@@ -174,7 +174,10 @@
                 </ul>
                 <div class="mt-4 flex flex-wrap gap-2">
                     @foreach (config('company.socials') as $social)
-                        <a href="{{ $social['url'] }}" target="_blank" rel="noopener noreferrer" class="rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-stone-700 hover:bg-sky-50 hover:text-blue-800">{{ $social['label'] }}</a>
+                        <a href="{{ $social['url'] }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 rounded-full bg-stone-100 px-3 py-1.5 text-xs font-medium text-stone-700 hover:bg-sky-50 hover:text-blue-800">
+                            <x-site.icon :name="$social['icon']" class="h-3.5 w-3.5" />
+                            {{ $social['label'] }}
+                        </a>
                     @endforeach
                 </div>
             </section>

@@ -11,10 +11,10 @@ return [
     'hours' => '09:00–23:00',
     'since' => '2024',
     'socials' => [
-        ['label' => 'WhatsApp', 'url' => 'https://wa.me/37379110798'],
-        ['label' => 'Telegram', 'url' => 'https://t.me/arendermd'],
-        ['label' => 'Instagram', 'url' => 'https://www.instagram.com/arender.md'],
-        ['label' => 'TikTok', 'url' => 'https://www.tiktok.com/@arender.md'],
-        ['label' => 'Facebook', 'url' => 'https://www.facebook.com/arender.md'],
+        ['label' => 'WhatsApp', 'icon' => 'whatsapp', 'url' => 'https://wa.me/37379110798'],
+        ['label' => 'Telegram', 'icon' => 'telegram', 'url' => 'https://t.me/arendermd'],
+        ['label' => 'Instagram', 'icon' => 'instagram', 'url' => 'https://www.instagram.com/arender.md'],
+        ['label' => 'TikTok', 'icon' => 'tiktok', 'url' => 'https://www.tiktok.com/@arender.md'],
+        ['label' => 'Facebook', 'icon' => 'facebook', 'url' => 'https://www.facebook.com/arender.md'],
     ],
 ];
