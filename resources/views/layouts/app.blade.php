@@ -4,10 +4,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta name="description" content="@yield('description', __('ui.home_lede'))">
-        <meta name="robots" content="@yield('robots', 'index, follow')">
-        <title>@hasSection('title')@yield('title') · @endif{{ config('app.name') }}</title>
+        @php
+            $seoTitle = trim($__env->yieldContent('title'));
+            $seoTitleFull = $seoTitle !== '' ? $seoTitle.' · '.config('app.name') : config('app.name');
+            $seoDescription = trim($__env->yieldContent('description')) ?: __('ui.seo_home_description');
+            $seoImage = trim($__env->yieldContent('og_image')) ?: asset('images/home-gamers.jpg');
+        @endphp
+        <title>{{ $seoTitle !== '' ? $seoTitleFull : __('ui.seo_home_title') }}</title>
+        <meta name="description" content="{{ $seoDescription }}">
+        <meta name="keywords" content="{{ __('ui.seo_keywords') }}">
+        <meta name="robots" content="@yield('robots', 'index, follow, max-image-preview:large')">
+        <meta name="author" content="{{ config('company.legal_name') }}">
+        <meta name="geo.region" content="MD-CU">
+        <meta name="geo.placename" content="{{ config('company.city') }}">
+        <meta name="geo.position" content="47.0465;28.8649">
+        <meta name="ICBM" content="47.0465, 28.8649">
         <link rel="canonical" href="{{ url()->current() }}">
+        <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
+        <link rel="icon" href="{{ asset('favicon-32.png') }}" type="image/png" sizes="32x32">
+        <link rel="icon" href="{{ asset('favicon-16.png') }}" type="image/png" sizes="16x16">
+        <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}" sizes="180x180">
+        <link rel="manifest" href="{{ asset('site.webmanifest') }}">
+        <meta name="theme-color" content="#2563eb">
         @if (request()->route('locale'))
             @foreach ($locales ?? [] as $code => $native)
                 <link rel="alternate" hreflang="{{ $code }}" href="{{ route(request()->route()->getName(), array_merge(request()->route()->parameters(), ['locale' => $code])) }}">
@@ -15,11 +33,18 @@
             <link rel="alternate" hreflang="x-default" href="{{ route(request()->route()->getName(), array_merge(request()->route()->parameters(), ['locale' => config('app.locale')])) }}">
         @endif
         <meta property="og:site_name" content="{{ config('app.name') }}">
-        <meta property="og:title" content="@hasSection('title')@yield('title') · @endif{{ config('app.name') }}">
-        <meta property="og:description" content="@yield('description', __('ui.home_lede'))">
+        <meta property="og:title" content="{{ $seoTitle !== '' ? $seoTitleFull : __('ui.seo_home_title') }}">
+        <meta property="og:description" content="{{ $seoDescription }}">
         <meta property="og:url" content="{{ url()->current() }}">
         <meta property="og:type" content="@yield('og_type', 'website')">
         <meta property="og:locale" content="{{ app()->getLocale() === 'ru' ? 'ru_RU' : 'ro_RO' }}">
+        <meta property="og:locale:alternate" content="{{ app()->getLocale() === 'ru' ? 'ro_RO' : 'ru_RU' }}">
+        <meta property="og:image" content="{{ $seoImage }}">
+        <meta property="og:image:alt" content="{{ __('ui.home_image') }}">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="{{ $seoTitle !== '' ? $seoTitleFull : __('ui.seo_home_title') }}">
+        <meta name="twitter:description" content="{{ $seoDescription }}">
+        <meta name="twitter:image" content="{{ $seoImage }}">
         @stack('head')
         <script>
             if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {

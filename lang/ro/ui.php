@@ -9,6 +9,13 @@ return [
     'nav_minigame' => 'Minigame',
     'home_title' => 'Chirie tehnică în Chișinău.',
     'home_lede' => 'PlayStation 5, JBL, Karcher, Dyson, Meta Quest și altele. Livrare gratuită în oraș. Fără gaj.',
+    'seo_home_title' => 'Închiriere tehnică Chișinău, Moldova | PlayStation 5, JBL, Dyson',
+    'seo_home_description' => 'Închiriere tehnică în Chișinău și Moldova: PlayStation 5, JBL PartyBox, Karcher, Dyson, Meta Quest. Livrare gratuită în oraș, fără gaj, contract oficial. Program zilnic 09:00–23:00.',
+    'seo_keywords' => 'închiriere tehnică Chișinău, chirie PlayStation 5 Moldova, închiriere JBL Chișinău, chirie Dyson, chirie Karcher, Meta Quest Chișinău, arender, rent tech Moldova',
+    'seo_catalog_title' => 'Catalog închirieri tehnice Chișinău',
+    'seo_catalog_description' => 'Catalog complet de închirieri tehnice în Chișinău: console, audio, curățenie și beauty. Prețuri pe zi, livrare gratuită în Moldova.',
+    'seo_news_title' => 'Noutăți gaming și tehnică Chișinău',
+    'seo_news_description' => 'Noutăți despre jocuri, console și tehnică de închiriat în Chișinău. Actualizări de la Arender Moldova.',
     'home_image' => 'Prieteni care joacă pe consolă acasă',
     'since' => 'Pe piață din :year',
     'promises' => [

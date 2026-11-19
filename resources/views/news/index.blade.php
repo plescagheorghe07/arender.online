@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', __('ui.news_title'))
-@section('description', __('ui.news_lede'))
+@section('title', __('ui.seo_news_title'))
+@section('description', __('ui.seo_news_description'))
 
 @section('content')
     <div class="enter">

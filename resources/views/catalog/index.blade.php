@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', __('ui.catalog_title'))
-@section('description', __('ui.catalog_lede'))
+@section('title', __('ui.seo_catalog_title'))
+@section('description', __('ui.seo_catalog_description'))
 
 @section('content')
     <div class="enter">

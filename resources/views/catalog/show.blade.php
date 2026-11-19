@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
-@section('title', $product->name)
-@section('description', $product->description !== '' ? $product->description : $product->details)
+@section('title', $product->name.' · '.__('ui.nav_catalog').' '.config('company.city'))
+@section('description', ($product->description !== '' ? $product->description : $product->details).' '.__('ui.seo_catalog_description'))
+@section('og_image', $product->imageUrl ?: asset('images/home-gamers.jpg'))
 
 @push('head')
     <script type="application/ld+json">

@@ -9,6 +9,13 @@ return [
     'nav_minigame' => 'Игра',
     'home_title' => 'Аренда техники в Кишинёве.',
     'home_lede' => 'PlayStation 5, JBL, Karcher, Dyson, Meta Quest и другое. Бесплатная доставка по городу. Без залога.',
+    'seo_home_title' => 'Аренда техники Кишинёв, Молдова | PlayStation 5, JBL, Dyson',
+    'seo_home_description' => 'Аренда техники в Кишинёве и Молдове: PlayStation 5, JBL PartyBox, Karcher, Dyson, Meta Quest. Бесплатная доставка по городу, без залога, официальный договор. Ежедневно 09:00–23:00.',
+    'seo_keywords' => 'аренда техники Кишинёв, аренда PlayStation 5 Молдова, аренда JBL Кишинёв, аренда Dyson, аренда Karcher, Meta Quest Кишинёв, arender, rent tech Moldova',
+    'seo_catalog_title' => 'Каталог аренды техники Кишинёв',
+    'seo_catalog_description' => 'Полный каталог аренды техники в Кишинёве: консоли, аудио, уборка и beauty. Цены за день, бесплатная доставка по Молдове.',
+    'seo_news_title' => 'Новости игр и техники Кишинёв',
+    'seo_news_description' => 'Новости об играх, консолях и технике в аренду в Кишинёве. Обновления от Arender Moldova.',
     'home_image' => 'Друзья играют на консоли дома',
     'since' => 'На рынке с :year',
     'promises' => [

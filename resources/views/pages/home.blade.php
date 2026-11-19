@@ -1,29 +1,54 @@
 @extends('layouts.app')
 
-@section('title', __('ui.nav_catalog'))
-@section('description', __('ui.home_lede'))
+@section('title', __('ui.seo_home_title'))
+@section('description', __('ui.seo_home_description'))
 
 @push('head')
     <script type="application/ld+json">
         {!! json_encode([
             '@context' => 'https://schema.org',
-            '@type' => 'LocalBusiness',
+            '@type' => ['LocalBusiness', 'Store'],
+            '@id' => route('home').'#business',
             'name' => config('app.name'),
-            'description' => __('ui.home_lede'),
+            'legalName' => config('company.legal_name'),
+            'description' => __('ui.seo_home_description'),
             'url' => route('home'),
             'telephone' => config('company.phone'),
             'email' => config('company.email'),
-            'image' => $products->first()?->imageUrl,
+            'image' => [asset('images/home-gamers.jpg'), $products->first()?->imageUrl],
+            'logo' => asset('icon-512.png'),
             'address' => [
                 '@type' => 'PostalAddress',
-                'streetAddress' => config('company.address'),
+                'streetAddress' => 'str. Calea Orheiului 90A',
                 'addressLocality' => config('company.city'),
+                'addressRegion' => 'Chișinău',
+                'postalCode' => 'MD-2020',
                 'addressCountry' => 'MD',
             ],
-            'openingHours' => 'Mo-Su '.config('company.hours'),
+            'geo' => [
+                '@type' => 'GeoCoordinates',
+                'latitude' => 47.0465,
+                'longitude' => 28.8649,
+            ],
+            'openingHoursSpecification' => [
+                '@type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                'opens' => '09:00',
+                'closes' => '23:00',
+            ],
             'currenciesAccepted' => 'MDL',
             'paymentAccepted' => 'Cash, Bank Transfer',
-            'areaServed' => config('company.city'),
+            'priceRange' => '$$',
+            'areaServed' => [
+                ['@type' => 'City', 'name' => 'Chișinău'],
+                ['@type' => 'Country', 'name' => 'Moldova'],
+            ],
+            'sameAs' => collect(config('company.socials'))->pluck('url')->values()->all(),
+            'hasOfferCatalog' => [
+                '@type' => 'OfferCatalog',
+                'name' => __('ui.catalog_title'),
+                'url' => route('catalog.index'),
+            ],
         ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}
     </script>
 @endpush

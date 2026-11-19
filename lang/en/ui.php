@@ -9,6 +9,13 @@ return [
     'nav_minigame' => 'Minigame',
     'home_title' => 'Equipment rental in Chișinău.',
     'home_lede' => 'PlayStation 5, JBL, Karcher, Dyson, Meta Quest and more. Free delivery in the city. No deposit.',
+    'seo_home_title' => 'Equipment rental Chișinău, Moldova | PlayStation 5, JBL, Dyson',
+    'seo_home_description' => 'Rent tech in Chișinău and Moldova: PlayStation 5, JBL PartyBox, Karcher, Dyson, Meta Quest. Free city delivery, no deposit, official contract. Daily 09:00–23:00.',
+    'seo_keywords' => 'equipment rental Chișinău, PlayStation 5 rental Moldova, JBL rental Chișinău, Dyson rental, Karcher rental, Meta Quest Chișinău, arender, rent tech Moldova',
+    'seo_catalog_title' => 'Tech rental catalogue Chișinău',
+    'seo_catalog_description' => 'Full tech rental catalogue in Chișinău: consoles, audio, cleaning and beauty. Daily prices, free delivery in Moldova.',
+    'seo_news_title' => 'Gaming and tech news Chișinău',
+    'seo_news_description' => 'News about games, consoles and rental tech in Chișinău. Updates from Arender Moldova.',
     'home_image' => 'Friends playing a console at home',
     'since' => 'On the market since :year',
     'promises' => [
