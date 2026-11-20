@@ -16,7 +16,7 @@ return [
     'seo_catalog_description' => 'Full tech rental catalogue in Chișinău: consoles, audio, cleaning and beauty. Daily prices, free delivery in Moldova.',
     'seo_news_title' => 'Gaming and tech news Chișinău',
     'seo_news_description' => 'News about games, consoles and rental tech in Chișinău. Updates from Arender Moldova.',
-    'home_image' => 'Friends playing a console at home',
+    'home_image' => 'PlayStation 5 and two DualSense controllers during play',
     'since' => 'On the market since :year',
     'promises' => [
         ['title' => 'Fast', 'text' => 'Delivery within an hour'],

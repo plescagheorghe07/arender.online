@@ -16,7 +16,7 @@ return [
     'seo_catalog_description' => 'Catalog complet de închirieri tehnice în Chișinău: console, audio, curățenie și beauty. Prețuri pe zi, livrare gratuită în Moldova.',
     'seo_news_title' => 'Noutăți gaming și tehnică Chișinău',
     'seo_news_description' => 'Noutăți despre jocuri, console și tehnică de închiriat în Chișinău. Actualizări de la Arender Moldova.',
-    'home_image' => 'Prieteni care joacă pe consolă acasă',
+    'home_image' => 'PlayStation 5 și două manete DualSense în timpul jocului',
     'since' => 'Pe piață din :year',
     'promises' => [
         ['title' => 'Rapid', 'text' => 'Livrare în decurs de o oră'],
